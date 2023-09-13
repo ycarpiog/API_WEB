@@ -1,0 +1,245 @@
+ 
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>Page Title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!-- Favicons -->
+        <link href="https://www.apache.org/favicons/apple-touch-icon-76x76.png" rel="icon">
+        <link href="https://www.apache.org/favicons/apple-touch-icon-76x76.png" rel="apple-touch-icon">
+        
+        <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        /* Style the body */
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+        }
+        
+        /* Header/logo Title */
+        .header {
+          padding: 60px;
+          text-align: center;        
+          background-color: rgba(255, 0, 0, 0.3);
+          overflow: hidden;      
+          padding: 10px 10px;
+          box-shadow: 0px 0px 15px 0px #333 inset;
+
+      
+        } 
+        
+        /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+        .navbar {
+          overflow: hidden;        
+          position: sticky;
+          position: -webkit-sticky;
+          top: 0;
+        }        
+        /* Style the navigation bar links */
+        .navbar a {
+          float: left;
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 5px 10px;
+          text-decoration: none;
+        }       
+        
+        /* Right-aligned link */
+        .navbar a.right {
+          float: right;
+        }        
+        /* Change color on hover */
+        .navbar a:hover {
+          background-color: #baa3a3;
+          color: black;
+        }
+        
+        /* Active/current link */
+        .navbar a.active {
+          background-color: #666;
+          color: rgb(78, 17, 233);
+        }
+        
+        /* Column container */
+        .row {  
+          display: -ms-flexbox; /* IE10 */
+          display: flex;
+          -ms-flex-wrap: wrap; /* IE10 */
+          flex-wrap: wrap;
+        }
+        
+       /* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 2px 2px;
+}
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+/*TABLAS*/
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0px auto;
+    align-items: center;
+}
+ 
+td, th {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;   
+}
+ 
+tr:nth-child(even) {
+    background-color: #eee;
+}
+ 
+tbody tr:hover {
+    background-color: rgb(205, 229, 221);
+}
+ 
+thead {
+    background-color: rgb(238, 171, 171);
+    color: white;
+}
+/*BOTON*/
+.button {
+  min-width: 80px;
+  height: 30px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  background: #adb5bd;
+}
+.button:hover {
+  background-color: #ced4da;
+}
+.button:active {
+  top: 2px;
+}
+
+</style>
+
+<!-- 2️⃣code HTML below -->
+
+</style>  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        </head>
+
+        <body>       
+          <div class="navbar">
+            <div class="header">
+              <a href="#default" class="logo">CompanyLogo</a>
+              <div class="header-right">               
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+              </div>
+            </div>
+          </div>
+          <!-- The sidebar -->
+          <div class="sidebar">                       
+              <a href="http://localhost:4000/GetRoute"><i class="fa fa-table"></i>GetRoute</a> 
+              <a href="http://localhost:4000/GetVehicles"><i class="fa fa-table"></i>GetVehicles</a> 
+              <a href="http://localhost:4000/GetValidacion"><i class="fa fa-table"></i>GetValidacion</a>   
+              <a href="http://localhost:4000/GetSerie"><i class="fa fa-table"></i>GetSerie</a>    
+              <a href="http://localhost:4000/GetActivacion"><i class="fa fa-table"></i>GetActivacion</a>     
+                         
+          </div>          
+          <!-- Page content -->
+          <div class="content">
+            <table >
+              <thead>              
+                  <th >#</th>
+                  <th >Orden</th>
+                  <th >ID</th>
+                  <th>Teléfono</th>
+                  <th>Orden</th>
+                  <th>Producto</th>
+                  <th>Cantidad</th>
+                  <th>EMEI</th>
+                  <th>Bodega</th>
+                  <th>Fecha</th>
+              </thead>        
+              <tbody>
+                 {% for d in data %}
+                 <tr>
+                    <th >{{d.Row}}</th>
+                    <th >{{d.Nombre}}</th>
+                    <th >{{d.DocClient}}</th>
+                    <th >{{d.Tel}}</th>
+                    <th >{{d.Orden}}</th>
+                    <th >{{d.Producto}}</th>
+                    <th >{{d.Cantidad}}</th>
+                    <th >{{d.EMEI}}</th>
+                    <th >{{d.Bodega}}</th>
+                    <th >{{d.Fecha}}</th>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>            
+          
+          </div>
+      </body> 
+    </html>
